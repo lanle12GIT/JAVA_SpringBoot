@@ -13,12 +13,12 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("api/vp1/categories")
+@RequestMapping("${api.prefix}/categories")
 //@Validated
 
 public class Categorycontroller {
     // hiển thị tất cả các categories
-    @GetMapping("")//http://localhost:8088/api/vp1/categories?page=1&limit=10
+    @GetMapping("")//http://localhost:8088/api/v1/categories?page=1&limit=10
     public ResponseEntity<String> getAllCategories(
             @RequestParam("page") int page,
             @RequestParam("limit") int limit
